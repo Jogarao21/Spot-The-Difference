@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spot the Differences Game</title>
+    <link rel="stylesheet" href="index.css">
+
+</head>
+<body>
+    <div class="game-container">
+        <div class="header">
+            <h1 class="title">🔍 Spot the Differences</h1>
+            <div class="task-info">Task <span id="currentTask">1</span> of <span id="totalTasks">3</span></div>
+            <div class="timer">Time: <span id="timeLeft">2:00</span></div>
+        </div>
+
+        <div class="images-container">
+            <div class="image-section">
+                <div class="image-title">Original Image</div>
+                <canvas id="originalCanvas" class="image-canvas" width="400" height="300"></canvas>
+            </div>
+            <div class="image-section">
+                <div class="image-title">Modified Image</div>
+                <canvas id="modifiedCanvas" class="image-canvas" width="400" height="300"></canvas>
+            </div>
+        </div>
+
+        <div class="progress">
+            Found: <span id="foundCount">0</span> / 5 differences
+        </div>
+
+        <div class="input-section">
+            <div class="input-title">Enter the differences you found:</div>
+            <div id="inputContainer">
+                <!-- Inputs will be generated here -->
+            </div>
+        </div>
+
+        <div id="answersSection" class="answers-section" style="display: none;">
+            <h3>⏰ Time's up! Here are the answers:</h3>
+            <div id="answersList"></div>
+        </div>
+
+        <button id="nextTaskBtn" class="next-task-btn" style="display: none;">Next Task →</button>
+        
+        <div id="completionMessage" class="completion-message" style="display: none;">
+            🎉 Congratulations! You've completed all tasks! 🎉
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
